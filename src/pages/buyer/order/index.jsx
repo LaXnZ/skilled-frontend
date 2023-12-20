@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 
+
 function Orders() {
   const [orders, setOrders] = useState([]);
   const [{ userInfo }] = useStateProvider();
@@ -31,8 +32,11 @@ function Orders() {
   }, [userInfo]);
   return (
     <div className="min-h-[80vh] my-10 mt-0 px-32">
-      <h3 className="m-5 text-2xl font-semibold">All your Orders</h3>
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <h3 className="m-5 text-2xl font-semibold ">All your Orders</h3>
+
+      <button onClick={handleFeedback} className="bg-blue-700 text-white p-2 rounded px-6 py-3">Add Feedback</button>
+
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg  ">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -91,11 +95,6 @@ function Orders() {
           </tbody>
         </table>
       </div>
-
-
-    
-      <button onClick={handleFeedback} className="bg-blue-500 text-white p-2 rounded">Add Feedback</button>
-
     </div>
 
   );
