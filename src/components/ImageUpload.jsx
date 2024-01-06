@@ -26,8 +26,8 @@ function ImageUpload({ files, setFile }) {
   };
   return (
     <div>
-      <div className="flex  items-center px-3">
-        <div className="rounded-lg  bg-gray-50 w-full">
+      <div className="flex  items-center px-3 ">
+        <div className="rounded-lg  bg-gray-50 w-full dark:bg-gray-800 dark:text-gray-200">
           <div className="m-4">
             <span className="flex justify-center items-center text-[12px] mb-1 text-red-500">
               {message}

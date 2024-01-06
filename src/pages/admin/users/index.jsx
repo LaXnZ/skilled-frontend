@@ -1,3 +1,5 @@
+
+import { GET_ALL_USERS } from "../../../utils/constants";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
@@ -8,7 +10,7 @@ function UserManagement() {
   useEffect(() => {
     const getAllUsers = async () => {
       try {
-        const response = await axios.get("/api/users"); // Replace with your API endpoint
+        const response = await axios.get(GET_ALL_USERS); // Replace with your API endpoint
         setUsers(response.data.users);
       } catch (error) {
         console.error("Error fetching users:", error);
@@ -43,7 +45,8 @@ function UserManagement() {
             </tr>
           </thead>
           <tbody>
-            {users.map(({ id, username, email, role }) => (
+           
+            {users.map(({ id, username, email, userRole }) => (
               <tr
                 className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600"
                 key={id}
@@ -55,7 +58,7 @@ function UserManagement() {
                   {username}
                 </th>
                 <td className="px-6 py-4">{email}</td>
-                <td className="px-6 py-4">{role}</td>
+                <td className="px-6 py-4">{userRole}</td>
                 <td className="px-6 py-4 text-right">
                   <Link
                     href={`/admin/users/edit/${id}`}

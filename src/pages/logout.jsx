@@ -15,7 +15,7 @@ function Logout() {
     window.location.href = window.location.origin;
   }, [removeCookie, dispatch, router]);
   return (
-    <div className="h-[80vh] flex items-center px-20 pt-20 flex-col">
+    <div className="h-[80vh] flex items-center px-20 pt-20 flex-col dark:bg-gray-800 dark:text-gray-200">
       <h1 className="text-4xl text-center">
         Logout successful. You are being redirected to the main page.
       </h1>

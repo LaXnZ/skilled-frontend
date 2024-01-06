@@ -17,7 +17,7 @@ function FeedbackForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="bg-gray-800 shadow-md rounded px-6 py-8 mb-4">
+        <form onSubmit={handleSubmit} className="bg-gray-800 shadow-md rounded px-6 py-8 mb-4 dark:bg-gray-800 dark:text-gray-200">
             <h2 className="text-1xl font-bold mb-4 text-gray-50 ">We'd love to hear from you!</h2>
 
             <h2 className="text-4xl font-bold mb-4 text-gray-50 ">Feedback Form</h2>

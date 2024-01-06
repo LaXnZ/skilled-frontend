@@ -35,7 +35,7 @@ function Search() {
         
           <div>
             <div className="my-4">
-              <span className="text-[#74767e] font-medium ">
+              <span className="text-[#73757c] font-medium  ">
                 {gigs.length} services available
               </span>
             </div>

@@ -36,14 +36,14 @@ function Pricing() {
             <ul className="flex gap-1 flex-col">
               {gigData.features.map((feature) => (
                 <li key={feature} className="flex items-center gap-3">
-                  <BsCheckLg className="text-[#1DBF73] text-lg" />
+                  <BsCheckLg className="text-[#1DBF73] text-lg  " />
                   <span className="text-[#4f5156]">{feature}</span>
                 </li>
               ))}
             </ul>
             {gigData.userId === userInfo.id ? (
               <button
-                className="flex items-center bg-[#1DBF73] text-white py-2 justify-center font-bold text-lg relative rounded"
+                className="flex items-center bg-[#1DBF73] text-white py-2 justify-center font-bold text-lg relative rounded dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                 onClick={() => router.push(`/seller/gigs/${gigData.id}`)}
               >
                 <span>Edit</span>
@@ -51,7 +51,7 @@ function Pricing() {
               </button>
             ) : (
               <button
-                className="flex items-center bg-[#1DBF73] text-white py-2 justify-center font-bold text-lg relative rounded"
+                className="flex items-center bg-[#1DBF73] text-white py-2 justify-center font-bold text-lg relative rounded dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                 onClick={() => router.push(`/checkout?gigId=${gigData.id}`)}
               >
                 <span>Continue</span>

@@ -113,13 +113,13 @@ function Profile() {
   };
 
   const inputClassName =
-    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500";
-  const labelClassName = "mb-2 text-lg font-medium text-gray-800 ";
-  return (
+    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500  dark:text-gray-200  dark:bg-gray-900 ";
+  const labelClassName = "mb-2 text-lg font-medium text-gray-800 dark:text-gray-300 ";
+  return ( 
     <>
       {isLoaded && (
-        <div className="flex flex-col items-center justify-start min-h-[80vh] gap-3">
-          <h2 className="text-3xl">Welocme to Skilled</h2>
+        <div className="flex flex-col items-center justify-start min-h-[80vh] gap-3  dark:bg-gray-800 dark:text-gray-200 ">
+          <h2 className="text-3xl">Welcome to Skilled</h2>
           <h4 className="text-xl">
             <br></br>
           </h4>
@@ -133,7 +133,7 @@ function Profile() {
                 Select a profile Picture
               </label>
 
-              <div className="bg-purple-500 h-36 w-36 flex items-center justify-center rounded-full relative">
+              <div className="bg-purple-500 h-36 w-36 flex items-center justify-center rounded-full relative dark:bg-blue-400">
                 {image ? (
                   <Image
                     src={URL.createObjectURL(image)}
@@ -151,7 +151,7 @@ function Profile() {
                     className="rounded-full"
                   />
                 ) : (
-                  <span className="text-6xl text-white">
+                  <span className="text-6xl text-white  ">
                     {userInfo.email[0].toUpperCase()}
                   </span>
                 )}
@@ -301,7 +301,7 @@ function Profile() {
 
 
             <button
-  className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md mb-4"
+  className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md mb-4 d dark:text-gray-200  dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button"
   onClick={setProfile}
 >
@@ -309,7 +309,7 @@ function Profile() {
 </button>
 
 <button
-  className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md mb-8"
+  className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md mb-8  dark:text-gray-200  dark:bg-sky-800 hover:dark:bg-sky-6000"
   type="button"
   onClick={() => router.push("/portfolio")}
 >

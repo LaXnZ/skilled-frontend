@@ -15,7 +15,7 @@ function ContextMenu({ data }) {
             <li
               key={index}
               onClick={callback}
-              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer"
+              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white cursor-pointer "
             >
               {name}
             </li>

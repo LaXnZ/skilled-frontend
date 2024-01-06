@@ -75,35 +75,35 @@ const AdminDashboard = () => {
   // }, [cookies, userInfo, router]);
   
   return (
-    <div className="flex">
+    <div className="flex ">
    
-      <div className="w-1/5 h-screen bg-blue-300 p-6 text-black mt-0 -mt-1">
+      <div className="w-1/5 h-screen bg-gray-700 p-6 text-black dark:text-gray-200  mt-0 -mt-1 ">
       <h2 className="text-4xl font-bold mb-8">Quick Actions</h2>
       <ul>
         <li className="mb-4">
-          <a href="/admin" className="flex items-center text-lg  hover:bg-blue-400 px-4 py-2 rounded transition-all duration-300">
+          <a href="/admin" className="flex items-center text-lg  hover:bg-blue-400 dark:text-gray-200 px-4 py-2 rounded transition-all duration-300 ">
             <span className="mr-2">🏠</span> Dashboard
           </a>
         </li>
         <li className="mb-4">
-          <a href="/admin/users" className="flex items-center text-lg  hover:bg-blue-400 px-4 py-2 rounded transition-all duration-300">
+          <a href="/admin/users" className="flex items-center text-lg  hover:bg-blue-400 dark:text-gray-200 px-4 py-2 rounded transition-all duration-300 ">
             <span className="mr-2">👥</span> Manage Users
           </a>
         </li>
         <li className="mb-4">
-          <a href="/admin/gigs" className="flex items-center text-lg  hover:bg-blue-400 px-4 py-2 rounded transition-all duration-300">
+          <a href="/admin/gigs" className="flex items-center text-lg  hover:bg-blue-400 dark:text-gray-200 px-4 py-2 rounded transition-all duration-300">
             <span className="mr-2">📦</span> Manage Gigs
           
             
           </a>
         </li>
         <li className="mb-4">
-          <a href="#" className="flex items-center text-lg  hover:bg-blue-400 px-4 py-2 rounded transition-all duration-300">
+          <a href="#" className="flex items-center text-lg  hover:bg-blue-400 dark:text-gray-200 px-4 py-2 rounded transition-all duration-300">
             <span className="mr-2">📂</span> Statistics
           </a>
         </li>
         <li className="mb-4">
-          <a href="#" className="flex items-center text-lg  hover:bg-blue-400 px-4 py-2 rounded transition-all duration-300">
+          <a href="#" className="flex items-center text-lg  hover:bg-blue-400 dark:text-gray-200 px-4 py-2 rounded transition-all duration-300">
             <span className="mr-2">📊</span> Analytics
           </a>
         </li>
@@ -111,7 +111,7 @@ const AdminDashboard = () => {
       
       <div className="mt-8 flex justify-center">
       <button
-  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4"
+  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 dark:text-gray-200 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button">
   New Features
   </button>
@@ -119,21 +119,21 @@ const AdminDashboard = () => {
     </div>
 
       {/* Main Content */}
-<div className="flex-1 p-10">
+<div className="flex-1 p-10 dark:bg-gray-800 dark:text-gray-200">
   <div className="mb-8 text-center mt-1">
     <h1 className="text-5xl font-bold mb-4">Admin Dashboard</h1>
-    <p className="text-gray-700">Manage users, gigs, and view analytics</p>
+    <p className="text-gray-700 dark:text-gray-200">Manage users, gigs, and view analytics</p>
   </div>
 
   
-  <div className="grid grid-cols-2 grid-rows-2 gap-4">
+  <div className="grid grid-cols-2 grid-rows-2 gap-4  ">
     {/* Manage Users */}
-    <div className="flex items-center justify-center bg-sky-100 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
+    <div className="flex items-center justify-center bg-sky-100 dark:bg-gray-700 dark:border-gray-300 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2">
   <div className="text-center">
     <h3 className="text-xl font-semibold mb-4">Manage Users</h3>
-    <p className="text-sm text-gray-600">All Users</p>
+    <p className="text-sm text-gray-600 dark:text-gray-200">All Users</p>
     <button
-  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4"
+  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button"
   onClick={() => router.push("/admin/users")}>
   View Details
@@ -143,11 +143,11 @@ const AdminDashboard = () => {
 
 
     {/* Manage Gigs */}
-    <div className="bg-sky-100 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
+    <div className="bg-sky-100 dark:bg-gray-700 dark:border-gray-300 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
   <h3 className="text-xl font-semibold mb-4">Manage Gigs</h3>
-  <p className="text-sm text-gray-600">All Gigs</p>
+  <p className="text-sm text-gray-600 dark:text-gray-200">All Gigs</p>
   <button
-  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4"
+  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button"
   onClick={() => router.push("/admin/gigs")}
   >
@@ -158,11 +158,11 @@ const AdminDashboard = () => {
 
 
     {/* Manage Stats */}
-    <div className="bg-sky-100 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
+    <div className="bg-sky-100 dark:bg-gray-700 dark:border-gray-300  p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
   <h3 className="text-xl font-semibold mb-4">Statistics</h3>
-  <p className="text-sm text-gray-600">All Categories</p>
+  <p className="text-sm text-gray-600 dark:text-gray-200">All Categories</p>
   <button
-  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4"
+  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button">
   View Details
   </button>
@@ -171,11 +171,11 @@ const AdminDashboard = () => {
 
 
     {/* Analytics */}
-    <div className="bg-sky-100 p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
+    <div className="bg-sky-100 dark:bg-gray-700 dark:border-gray-300  p-10 rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-2 text-center">
   <h3 className="text-xl font-semibold mb-4">Analytics</h3>
-  <p className="text-sm text-gray-600">All Categories</p>
+  <p className="text-sm text-gray-600 dark:text-gray-200 ">All Categories</p>
   <button
-  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4"
+  className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button">
   View Details
   </button>

@@ -27,7 +27,7 @@ function Index() {
 
   const DashboardCard = ({ title, value, onClick }) => (
     <div
-      className="shadow-lg mb-4 p-10 flex flex-col items-center justify-center cursor-pointer hover:shadow-xl rounded-lg transition-all duration-300"
+      className="shadow-lg mb-4 p-10 flex flex-col items-center justify-center cursor-pointer hover:shadow-xl rounded-lg transition-all duration-300  dark:bg-gray-900 dark:text-gray-200"
       onClick={onClick}
     >
       <h2 className="text-2xl pb-4">{title}</h2>
@@ -40,9 +40,9 @@ function Index() {
   return (
     <>
       {userInfo && (
-        <div className="flex min-h-[80vh] my-10 mt-0 px-6 lg:px-32 gap-5">
-          <div className="shadow-md h-max p-12 flex flex-col gap-5 min-w-[240px] w-96 bg-white rounded-lg">
-            <div className="flex gap-5 justify-center items-center">
+        <div className="flex min-h-[80vh] my-10 mt-0 px-6 lg:px-32 gap-5 dark:bg-gray-800 ">
+          <div className="shadow-md h-max p-12 flex flex-col gap-5 min-w-[240px] w-96 bg-white rounded-lg  dark:text-white dark:bg-slate-900 dark:border-gray-300">
+            <div className="flex gap-5 justify-center items-center ">
               <div>
                 {userInfo?.image ? (
                   <Image
@@ -60,19 +60,19 @@ function Index() {
                   </div>
                 )}
               </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[#62646a] text-lg font-medium">
+              <div className="flex flex-col gap-1 dark:text-white ">
+                <span className="text-[#62646a] text-lg font-medium dark:text-white  ">
                   {userInfo.username}
                 </span>
                 <span className="font-bold text-md">{userInfo.fullName}</span>
               </div>
             </div>
             <div className="border-t border-gray-300 pt-6">
-              <p className="text-gray-700">{userInfo.description}</p>
+              <p className="text-gray-700 dark:text-white">{userInfo.description}</p>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 w-full ">
             <DashboardCard
               title="Total Gigs"
               value={dashboardData?.gigs}

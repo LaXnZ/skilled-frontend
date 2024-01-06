@@ -111,13 +111,13 @@ function AuthWrapper({ type }) {
         className="h-[100vh] w-[100vw] backdrop-blur-md fixed top-0"
         id="blur-div"
       ></div>
-      <div className="h-[100vh] w-[100vw] flex flex-col justify-center items-center">
+      <div className="h-[100vh] w-[100vw] flex flex-col justify-center items-center ">
         <div
-          className="fixed z-[101] h-max w-max bg-white flex flex-col justify-center items-center"
+          className="fixed z-[101] h-max w-max bg-white flex flex-col justify-center items-center dark:bg-gray-800 dark:text-gray-200"
           id="auth-modal"
         >
-          <div className="flex flex-col justify-center items-center p-8 gap-7">
-            <h3 className="text-2xl font-semibold text-slate-700">
+          <div className="flex flex-col justify-center items-center p-8 gap-7 dark:bg-gray-700 ">
+            <h3 className="text-2xl font-semibold text-slate-900  dark:text-slate-200">
               {type === "login" ? "Sign In " : "Sign Up "}
               to Skilled
             </h3>
@@ -136,14 +136,14 @@ function AuthWrapper({ type }) {
                 <span className="bg-white relative z-10 px-2">OR</span>
               </span>
             </div> */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 ">
               <input
                 type="text"
                 name="email"
                 placeholder="Email / Username"
                 onChange={handleChange}
                 className={`border ${
-                  errors.email ? "border-red-500" : "border-slate-300"
+                  errors.email ? "border-red-500" : "border-slate-300 dark:bg-gray-700 "
                 } p-3 w-80`}
               />
               {errors.email && (
@@ -154,7 +154,7 @@ function AuthWrapper({ type }) {
                 placeholder="Password"
                 onChange={handleChange}
                 className={`border ${
-                  errors.password ? "border-red-500" : "border-slate-300"
+                  errors.password ? "border-red-500" : "border-slate-300 dark:bg-gray-700 "
                 } p-3 w-80`}
                 name="password"
               />
@@ -162,7 +162,7 @@ function AuthWrapper({ type }) {
                 <span className="text-red-500 text-sm">{errors.password}</span>
               )}
               <button
-                className="bg-[#1DBF73] text-white px-12 text-lg font-semibold rounded-r-md p-3 w-80"
+                className="bg-[#1DBF73] text-white px-12 text-lg font-semibold rounded-r-md p-3 w-80 dark:bg-gray-800"
                 onClick={handleClick}
                 type="button"
               >
@@ -171,13 +171,13 @@ function AuthWrapper({ type }) {
             </div>
           </div>
           <div className="py-5 w-full flex items-center justify-center border-t border-slate-400">
-            <span className="text-sm  text-slate-700">
+            <span className="text-sm  text-slate-700 dark:text-slate-200">
               {" "}
               {type === "login" ? (
                 <>
                   Not a member yet?&nbsp;
                   <span
-                    className="text-[#1DBF73] cursor-pointer"
+                    className="text-[#1DBF73] cursor-pointer "
                     onClick={() => {
                       dispatch({
                         type: reducerCases.TOGGLE_SIGNUP_MODAL,

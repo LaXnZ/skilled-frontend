@@ -26,8 +26,8 @@ function Everything() {
     },
   ];
   return (
-    <div className="bg-sky-100 flex py-20 justify-between">
-      <div className="relative h-112 w-2/4">
+    <div className="bg-sky-100 flex py-20 justify-between dark:bg-gray-800">
+      <div className="relative h-112 w-2/4 dark:text-gray-400">
         <Image
           className="object-contain pl-28"
           src="/everything.png"
@@ -36,7 +36,7 @@ function Everything() {
         />
       </div>
       <div className="pr-44">
-        <h2 className="text-4xl mb-10 text-[#404145] font-bold">
+        <h2 className="text-4xl mb-10 text-[#404145] font-bold dark:text-gray-200">
           Why you should choose Skilled
         </h2>
        
@@ -44,11 +44,11 @@ function Everything() {
           {everythingData.map(({ title, subtitle }) => {
             return (
               <li key={title}>
-                <div className="flex gap-2 items-center text-xl">
-                  <MdArrowRight className="text-[#62646a]" />
+                <div className="flex gap-2 items-center text-xl dark:text-blue-100">
+                  <MdArrowRight className="text-[#62646a]  dark:text-gray-200"  />
                   <h4>{title}</h4>
                 </div>
-                <p className="text-[#62646a]">{subtitle}</p>
+                <p className="text-[#62646a]  dark:text-gray-400">{subtitle}</p>
               </li>
             );
           })}

@@ -173,7 +173,7 @@ function Navbar() {
         <nav
           className={`w-full px-24 flex justify-between items-center py-6  top-0 z-30 transition-all duration-300 ${
             isFixed || userInfo
-              ? "fixed bg-white border-b border-gray-200"
+              ? "fixed bg-white border-b border-gray-200  dark:bg-gray-800 dark:text-gray-200"
               : "absolute bg-transparent border-transparent"
           }`}
         >
@@ -195,7 +195,7 @@ function Navbar() {
               onChange={(e) => setSearchData(e.target.value)}
             />
             <button
-              className="bg-gray-500 py-1.5 text-white w-16 flex justify-center items-center rounded-r-lg"
+              className="bg-gray-500 py-1.5 text-white w-16 flex justify-center items-center rounded-r-lg  dark:bg-gray-600 dark:text-gray-200"
               onClick={() => {
                 setSearchData("");
                 router.push(`/search?q=${searchData}`);
@@ -225,7 +225,8 @@ function Navbar() {
                           isFixed
                             ? "border-[#1DBF73] text-[#1DBF73]"
                             : "border-white text-white"
-                        } hover:bg-[#1DBF73] hover:text-white hover:border-[#1DBF73] transition-all duration-500`}
+                        } hover:bg-[#1DBF73] hover:text-white hover:border-[#1DBF73] transition-all duration-500
+                        dark:bg-sky-800 hover:dark:bg-sky-600`}
                       >
                         {linkName}
                       </button>
@@ -238,7 +239,7 @@ function Navbar() {
             <ul className="flex gap-10 items-center">
               {isSeller && (
                 <li
-                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md"
+                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md  dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                   onClick={() => router.push("/seller/gigs/create")}
                 >
                   Create Gig
@@ -246,14 +247,14 @@ function Navbar() {
               )}
               {isSeller && (
                 <li
-                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md"
+                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                   onClick={() => router.push("/seller")}
                 >
                   Dashboard
                 </li>
               )}
               <li
-                className="cursor-pointer text-[#ffffff] bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-medium"
+                className="cursor-pointer text-[#ffffff] bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-medium dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                 onClick={handleOrdersNavigate}
               >
                 Orders
@@ -291,7 +292,7 @@ function Navbar() {
                     className="rounded-full"
                   />
                 ) : (
-                  <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative">
+                  <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative dark:bg-blue-400">
                     <span className="text-xl text-white">
                       {userInfo &&
                         userInfo?.email &&

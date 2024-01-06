@@ -50,11 +50,11 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full  mx-auto px-32 py-8 h-max border-t border-gray-200 bg-gray-100">
+    <footer className="w-full  mx-auto px-32 py-8 h-max border-t border-gray-200 bg-gray-100  dark:bg-gray-800 dark:text-gray-100">
       <div className=" flex items-center justify-between">
       
         <Link href="/">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between ">
             <img className="w-52" src="/skilled-logo.png"></img>
             {/* <h3 className="text-xl text-[#404145]"> © Skilled.com 2023</h3> */}
           </div>
@@ -63,11 +63,11 @@ function Footer() {
         {data.map(({ headerName, links }) => {
           return (
             <li key={headerName} className="flex flex-col gap-2">
-              <span className="font-bold text-center">{headerName}</span>
+              <span className="font-bold text-center ">{headerName}</span>
               <ul className="flex flex-initial gap-2 ">
                 
                 {links.map(({ name, link }) => (
-                  <li key={name} className="text-[#404145]  pl-10">
+                  <li key={name} className="text-[#404145]  pl-10 dark:bg-gray-800 dark:text-gray-200">
                     <Link href={link}>{name}</Link>
                   </li>
                 ))}
@@ -81,7 +81,7 @@ function Footer() {
           {socialLinks.map(({ icon, link, name }) => (
             <li 
               key={name}
-              className="text-xl text-[#404145] hover:text-sky-400 transition-all"
+              className="text-xl text-[#404145] hover:text-sky-400 transition-all dark:bg-gray-800 dark:text-gray-200"
             >
               <Link href={link}>{icon}</Link>
             </li>

@@ -19,7 +19,7 @@ function SearchGridItem({ gig }) {
   };
   return (
     <div
-      className="max-w-[300px] flex flex-col gap-2 p-1 cursor-pointer mb-8"
+      className="max-w-[300px] flex flex-col gap-2 p-1 cursor-pointer mb-8 "
       onClick={() => router.push(`/gig/${gig.id}`)}
     >
       <div className="relative w-64 h-40">

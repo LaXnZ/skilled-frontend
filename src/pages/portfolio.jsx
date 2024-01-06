@@ -42,26 +42,26 @@ const AddPortfolio = () => {
     'block p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500';
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-[80vh] gap-10">
+    <div className="flex flex-col items-center justify-start min-h-[80vh] gap-10 dark:bg-gray-800 dark:text-gray-200">
       <h2 className="text-3xl">Create Portfolio</h2>
 
       <div className="flex flex-col items-center w-full gap-5">
         <div className="flex gap-5">
           <div>
-            <label className="mb-2 text-lg font-medium text-gray-800" htmlFor="cvFile">
+            <label className="mb-2 text-lg font-medium text-gray-800 " htmlFor="cvFile">
               Upload your CV
             </label>
             <input
               type="file"
               accept=".pdf,.doc,.docx"
               onChange={handleCvFileChange}
-              className={inputClassName}
+              className={inputClassName }
             />
           </div>
              
 
           <div>
-            <label className="mb-2 text-lg font-medium text-gray-800" htmlFor="coverPhoto">
+            <label className="mb-2 text-lg font-medium text-gray-800  " htmlFor="coverPhoto">
               Upload Cover Photo
             </label>
             <input
@@ -74,7 +74,7 @@ const AddPortfolio = () => {
         </div>
 
         <div className="flex flex-col w-[600px]">
-  <label className="mb-2 text-lg font-medium text-gray-800" htmlFor="about">
+  <label className="mb-2 text-lg font-medium text-gray-800 " htmlFor="about">
     About Section
   </label>
   <textarea
@@ -90,7 +90,7 @@ const AddPortfolio = () => {
 
 
 <div>
-  <label className="mb-2 text-lg font-medium text-gray-800" htmlFor="skills">
+  <label className="mb-2 text-lg font-medium text-gray-800  " htmlFor="skills">
     Skills
   </label>
   <input
@@ -114,7 +114,7 @@ const AddPortfolio = () => {
         )}
 
         <button
-          className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md"
+          className="border text-lg font-semibold px-5 py-3 bg-sky-500 hover:bg-sky-400 text-white rounded-md  dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
           type="button"
           onClick={handleSubmit}
         >

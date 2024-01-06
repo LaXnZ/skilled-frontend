@@ -5,8 +5,8 @@ import { BsCheckCircle } from "react-icons/bs";
 
 function SkilledBusiness() {
   return (
-    <div className="bg-[#0d084d] px-20 py-16 flex gap-10">
-      <div className="text-white flex flex-col gap-6 justify-center items-start">
+    <div className="bg-[#0d084d] px-20 py-16 flex gap-10 dark:bg-gray-800 dark:text-gray-200">
+      <div className="text-white flex flex-col gap-6 justify-center items-start dark:text-gray-200">
         <div className="flex gap-2">
           <SkilledLogo fillColor={"#ffffff"} />
           <span className="text-white text-3xl font-bold">Business</span>
@@ -38,7 +38,7 @@ function SkilledBusiness() {
           className="border text-base font-medium px-5 py-2   border-[#1DBF73] bg-[#1DBF73] text-white rounded-md"
           type="button"
         >
-          Explore Fiverr Business
+          Explore Skilled Business
         </button>
       </div>
       <div className="relative h-[512px] w-2/3">

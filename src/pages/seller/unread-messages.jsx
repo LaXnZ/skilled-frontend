@@ -35,7 +35,7 @@ function UnreadMessages() {
   };
 
   return (
-    <div className="min-h-[80vh] my-10 mt-0 px-32">
+    <div className="min-h-[80vh] my-10 mt-0 px-32  dark:bg-gray-800 dark:text-gray-200">
       <h3 className="m-5 text-2xl font-semibold">All your Unread Messages</h3>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">

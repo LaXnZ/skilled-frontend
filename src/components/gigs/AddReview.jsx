@@ -48,7 +48,7 @@ function AddReview() {
   return (
     <div className="mb-10">
       {
-        <h3 className="text-2xl my-5 font-normal text-[#404145]">
+        <h3 className="text-2xl my-5 font-normal text-[#404145] dark:bg-gray-800 dark:text-gray-200">
           Add a Review
         </h3>
       }
