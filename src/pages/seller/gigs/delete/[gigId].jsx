@@ -38,11 +38,12 @@ const DeleteGigPage = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="bg-white p-6 shadow-lg rounded-lg mx-auto mt-20 max-w-md text-center">
-        <h1 className="text-2xl font-semibold mb-4">Delete Gig</h1>
+         
+        <div className=" dark:bg-gray-800 dark:text-gray-200">
+        <div className="bg-white p-6 shadow-lg rounded-lg mx-auto pt-32 pb-96 max-w-md text-center dark:bg-gray-800 dark:text-gray-200">
+        <h1 className="text-2xl font-semibold mb-4 ">Delete Gig</h1>
         <p className="mb-4">Are you sure you want to delete this gig?</p>
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 dark:bg-gray-800 dark:text-gray-200">
           <button
             onClick={handleDelete}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400 transition-colors"
@@ -54,7 +55,7 @@ const DeleteGigPage = () => {
           </button>
         </div>
         {showPopup && (
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 flex items-center justify-center ">
             <div className="bg-white p-4 rounded shadow-md">
               <p className="text-green-500 font-semibold text-sm">{message}</p>
             </div>

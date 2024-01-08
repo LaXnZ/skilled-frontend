@@ -11,9 +11,9 @@ function EditGig() {
   const router = useRouter();
   const { gigId } = router.query;
   const inputClassName =
-    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500";
+    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:text-white dark:bg-slate-800 dark:border-gray-300";
   const labelClassName =
-    "mb-2 text-lg font-medium text-gray-900  dark:text-white";
+    "mb-2 text-lg font-medium text-gray-900 dark:text-white";
   const [files, setFile] = useState([]);
   const [features, setfeatures] = useState([]);
   const [data, setData] = useState({
@@ -115,12 +115,12 @@ function EditGig() {
     }
   };
   return (
-    <div className="min-h-[80vh] my-10 mt-0 px-32">
-      <h1 className="text-6xl text-gray-900 mb-5">Edit Gig</h1>
-      <h3 className="text-3xl text-gray-900 mb-5">
+    <div className="min-h-[80vh] py-10 mt-0 px-32 dark:bg-gray-800 dark:text-gray-200">
+      <h1 className="text-6xl text-gray-900 mb-5 dark:bg-gray-800 dark:text-gray-200">Edit Gig</h1>
+      <h3 className="text-3xl text-gray-900 mb-5 dark:bg-gray-800 dark:text-gray-200">
         Enter the details to edit the gig
       </h3>
-      <form action="" className="flex flex-col gap-5 mt-10">
+      <form action="" className="flex flex-col gap-5 mt-10 dark:bg-gray-800 dark:text-gray-200">
         <div className="grid grid-cols-2 gap-11">
           <div>
             <label htmlFor="title" className={labelClassName}>
@@ -132,7 +132,7 @@ function EditGig() {
               onChange={handleChange}
               type="text"
               id="title"
-              className={inputClassName}
+              className={inputClassName + "text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:text-white dark:bg-slate-800 dark:border-gray-300"}
               placeholder="e.g. I will do something I'm really good at"
               required
             />
@@ -143,7 +143,7 @@ function EditGig() {
             </label>
             <select
               id="categories"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 dark:text-white dark:bg-slate-800 dark:border-gray-300"
               name="category"
               onChange={handleChange}
               value={data.category}
@@ -162,19 +162,19 @@ function EditGig() {
           </label>
           <textarea
             id="description"
-            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:text-white dark:bg-slate-800 dark:border-gray-300"
             placeholder="Write a short description"
             name="description"
             value={data.description}
             onChange={handleChange}
           ></textarea>
         </div>
-        <div className="grid grid-cols-2 gap-11">
+        <div className="grid grid-cols-2 gap-11 dark:text-gray-200">
           <div>
-            <label htmlFor="delivery" className={labelClassName}>Delivery Time</label>
+            <label htmlFor="delivery" className={labelClassName }>Delivery Time</label>
             <input
               type="number"
-              className={inputClassName}
+              className={inputClassName +" dark:bg-slate-800 dark:border-gray-300"}
               id="delivery"
               name="time"
               value={data.time}
@@ -189,7 +189,7 @@ function EditGig() {
             <input
               type="number"
               id="revision"
-              className={inputClassName}
+              className={inputClassName +" dark:bg-slate-800 dark:border-gray-300"}
               placeholder="Max Number of Revisions"
               name="revisions"
               value={data.revisions}
@@ -199,14 +199,14 @@ function EditGig() {
         </div>
         <div className="grid grid-cols-2 gap-11">
           <div>
-            <label htmlFor="features" className={labelClassName}>
+            <label htmlFor="features" className={labelClassName }>
               Features
             </label>
             <div className="flex gap-3 items-center mb-5">
               <input
                 type="text"
                 id="features"
-                className={inputClassName}
+                className={inputClassName +" dark:bg-slate-800 dark:border-gray-300"}
                 placeholder="Enter a Feature Name"
                 name="feature"
                 value={data.feature}
@@ -214,7 +214,7 @@ function EditGig() {
               />
               <button
                 type="button"
-                className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800  font-medium  text-lg px-10 py-3 rounded-md dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600 "
+                className="focus:outline-none text-white bg-blue-700 hover:bg-blue-800  font-medium  text-lg px-10 py-3 rounded-md  dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600 "
                 onClick={addFeature}
               >
                 Add
@@ -225,7 +225,7 @@ function EditGig() {
                 return (
                   <li
                     key={feature + index.toString()}
-                    className="flex gap-2 items-center py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-red-700 cursor-pointer hover:border-red-200"
+                    className="flex gap-2 items-center py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-red-700 cursor-pointer hover:border-red-200 dark:bg-gray-800 dark:text-gray-200"
                   >
                     <span>{feature}</span>
                     <span
@@ -240,7 +240,7 @@ function EditGig() {
             </ul>
           </div>
           <div>
-            <label htmlFor="image" className={labelClassName}>
+            <label htmlFor="image" className={labelClassName  }>
               Gig Images
             </label>
             <div>
@@ -250,12 +250,12 @@ function EditGig() {
         </div>
         <div className="grid grid-cols-2 gap-11">
           <div>
-            <label htmlFor="shortDesc" className={labelClassName}>
+            <label htmlFor="shortDesc" className={labelClassName }>
               Short Description
             </label>
             <input
               type="text"
-              className={`${inputClassName} w-1/5`}
+              className={`${inputClassName} w-1/5c text dark:text-white dark:bg-slate-800 dark:border-gray-300`}
               id="shortDesc"
               placeholder="Enter a short description."
               name="shortDesc"
@@ -264,12 +264,12 @@ function EditGig() {
             />
           </div>
           <div>
-            <label htmlFor="price" className={labelClassName}>
+            <label htmlFor="price" className={labelClassName }>
               Gig Price ( LKR )
             </label>
             <input
               type="number"
-              className={`${inputClassName} w-1/5`}
+              className={`${inputClassName} w-1/5 dark:text-white dark:bg-slate-800 dark:border-gray-300`}
               id="price"
               placeholder="Enter a price"
               name="price"
@@ -280,7 +280,7 @@ function EditGig() {
         </div>
         <div>
           <button
-            className="border   text-lg font-semibold px-5 py-3   border-[#1DBF73] bg-[#1DBF73] text-white rounded-md dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
+            className="border   text-lg font-semibold px-5 py-3   border-[#1DBF73] bg-[#1DBF73] text-white rounded-md  dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
             type="button"
             onClick={editGig}
           >

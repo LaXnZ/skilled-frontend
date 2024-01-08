@@ -190,7 +190,7 @@ function Navbar() {
             <input
               type="text"
               placeholder="What service are you looking for today?"
-              className="w-[30rem] py-2.5 px-4 border rounded-l-lg"
+              className="w-[30rem] py-2.5 px-4 border rounded-l-lg dark:bg-gray-800"
               value={searchData}
               onChange={(e) => setSearchData(e.target.value)}
             />
@@ -201,7 +201,7 @@ function Navbar() {
                 router.push(`/search?q=${searchData}`);
               }}
             >
-              <IoSearchOutline className="fill-white text-white h-6 w-6" />
+              <IoSearchOutline className="fill-white text-white h-6 w-6 " />
             </button>
           </div>
           {!userInfo ? (
@@ -247,14 +247,14 @@ function Navbar() {
               )}
               {isSeller && (
                 <li
-                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
+                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md  dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                   onClick={() => router.push("/seller")}
                 >
                   Dashboard
                 </li>
               )}
               <li
-                className="cursor-pointer text-[#ffffff] bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-medium dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
+                className="cursor-pointer text-[#ffffff] bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-medium dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                 onClick={handleOrdersNavigate}
               >
                 Orders

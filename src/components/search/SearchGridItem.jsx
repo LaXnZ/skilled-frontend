@@ -19,10 +19,10 @@ function SearchGridItem({ gig }) {
   };
   return (
     <div
-      className="max-w-[300px] flex flex-col gap-2 p-1 cursor-pointer mb-8 "
+      className="max-w-[300px] flex flex-col gap-2 p-1 cursor-pointer mb-8 dark:bg-gray-700 dark:text-gray-200 rounded-xl"
       onClick={() => router.push(`/gig/${gig.id}`)}
     >
-      <div className="relative w-64 h-40">
+      <div className="relative w-64 h-40 ">
         <Image
           src={`${IMAGES_URL}/${gig.images[0]}`}
           alt="gig"
@@ -30,7 +30,7 @@ function SearchGridItem({ gig }) {
           className="rounded-xl"
         />
       </div>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 ">
         <div>
           {gig.createdBy.profileImage ? (
             <Image
@@ -41,7 +41,7 @@ function SearchGridItem({ gig }) {
               className="rounded-full"
             />
           ) : (
-            <div className="bg-purple-500 h-7 w-7 flex items-center justify-center rounded-full relative">
+            <div className="bg-purple-500 h-7 w-7 flex items-center justify-center rounded-full relative  dark:bg-blue-400">
               <span className="text-lg text-white">
                 {gig.createdBy.email[0].toUpperCase()}
               </span>
@@ -53,14 +53,14 @@ function SearchGridItem({ gig }) {
         </span>
       </div>
       <div>
-        <p className="line-clamp-2 text-[#404145]">{gig.title}</p>
+        <p className="line-clamp-2 text-[#404145]  dark:text-gray-200">{gig.title}</p>
       </div>
-      <div className="flex items-center gap-1 text-yellow-400">
+      <div className="flex items-center gap-1 text-yellow-400 ">
         <FaStar />
         <span>
           <strong className="font-medium">{calculateRatings()}</strong>
         </span>
-        <span className="text-[#74767e]">({gig.reviews.length})</span>
+        <span className="text-[#74767e]  dark:text-gray-200">({gig.reviews.length})</span>
       </div>
       <div>
         <strong className="font-medium">From LKR {gig.price}.00</strong>

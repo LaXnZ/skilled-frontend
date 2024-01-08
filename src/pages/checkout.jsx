@@ -35,8 +35,8 @@ function Checkout() {
   };
 
   return (
-    <div className="min-h-[80vh] max-w-full mx-20 flex flex-col gap-10 items-center dark:bg-gray-800 dark:text-gray-200">
-      <h1 className="text-3xl">
+    <div className="min-h-[80vh] pt-10 max-w-full flex flex-col gap-10 items-center dark:bg-gray-800 dark:text-gray-200">
+      <h1 className="text-3xl dark:text-gray-200">
         Please complete the payment to place the order.
       </h1>
       {clientSecret && (

@@ -31,13 +31,13 @@ function Orders() {
     if (userInfo) getOrders();
   }, [userInfo]);
   return (
-    <div className="min-h-[80vh] my-10 mt-0 px-32 dark:bg-gray-800 dark:text-gray-200">
+    <div className="min-h-[80vh] py-10 mt-0 px-32 dark:bg-gray-800 dark:text-gray-200">
       <h3 className="m-5 text-2xl font-semibold ">All your Orders</h3>
 
       <button onClick={handleFeedback} className="bg-blue-700 text-white p-2 rounded px-6 py-3 dark:bg-sky-800 hover:dark:bg-sky-600">Add Feedback</button>
 
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg  ">
-        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg pt-4 ">
+        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">

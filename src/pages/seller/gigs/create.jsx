@@ -10,7 +10,7 @@ function CreateGigs() {
   const [cookies] = useCookies();
   const router = useRouter();
   const inputClassName =
-    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500";
+    "block p-4 w-full text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:text-white";
   const labelClassName = "mb-2 text-lg font-medium text-gray-900  ";
   const [files, setFile] = useState([]);
   const [features, setfeatures] = useState([]);
@@ -146,7 +146,7 @@ function CreateGigs() {
     }
   };
   return (
-    <div className="min-h-[80vh] my-10 mt-0 px-32  dark:bg-gray-800 dark:text-gray-200">
+    <div className="min-h-[80vh] py-10 mt-0 px-32  dark:bg-gray-800 dark:text-gray-200">
       <h1 className="text-6xl text-gray-900 mb-5  dark:bg-gray-800 dark:text-gray-200">Create a new Gig</h1>
       <h3 className="text-3xl text-gray-900 mb-5  dark:bg-gray-800 dark:text-gray-200">
         Enter the details to create the gig
@@ -211,7 +211,7 @@ function CreateGigs() {
             </label>
             <input
               type="number"
-              className={inputClassName + "dark:text-white dark:bg-slate-800 dark:border-gray-300"}
+              className={inputClassName + " dark:bg-slate-800 dark:border-gray-300"}
               id="delivery"
               name="time"
               value={data.time}
@@ -227,7 +227,7 @@ function CreateGigs() {
             <input
               type="number"
               id="revision"
-              className={inputClassName + "dark:text-white dark:bg-slate-800 dark:border-gray-300"}
+              className={inputClassName + " dark:bg-slate-800 dark:border-gray-300"}
               placeholder="Max Number of Revisions"
               name="revisions"
               value={data.revisions}
@@ -247,7 +247,7 @@ function CreateGigs() {
               <input
                 type="text"
                 id="features"
-                className={inputClassName + "dark:text-white dark:bg-slate-800 dark:border-gray-300"}
+                className={inputClassName + " dark:bg-slate-800 dark:border-gray-300"}
                 placeholder="Enter a Feature Name"
                 name="feature"
                 value={data.feature}

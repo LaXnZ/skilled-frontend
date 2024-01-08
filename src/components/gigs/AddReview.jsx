@@ -46,9 +46,9 @@ function AddReview() {
   };
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 ">
       {
-        <h3 className="text-2xl my-5 font-normal text-[#404145] dark:bg-gray-800 dark:text-gray-200">
+        <h3 className="text-2xl my-5 font-normal text-[#404145]  dark:text-gray-200">
           Add a Review
         </h3>
       }
@@ -59,7 +59,7 @@ function AddReview() {
           id="reviewText"
           onChange={(e) => setData({ ...data, reviewText: e.target.value })}
           value={data.reviewText}
-          className="block p-2.5 w-4/6 text-sm text-gray-900 bg-gray-50 rounded border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+          className="block p-2.5 w-4/6 text-sm text-gray-900 bg-gray-50 rounded border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-gray-200"
           placeholder="Add Review"
         ></textarea>
         <div className="flex gap-1">
@@ -75,7 +75,7 @@ function AddReview() {
         </div>
         {error && <p className="text-red-500">{error}</p>}
         <button
-          className="flex items-center bg-[#1DBF73] text-white py-2 justify-center text-md relative rounded px-5"
+          className="flex items-center bg-[#1DBF73] text-white py-2 justify-center text-md relative rounded px-5 dark:bg-sky-800 hover:dark:bg-sky-600"
           onClick={addReview}
         >
           Add Review

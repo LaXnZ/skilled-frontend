@@ -40,7 +40,7 @@ function Index() {
   return (
     <>
       {userInfo && (
-        <div className="flex min-h-[80vh] my-10 mt-0 px-6 lg:px-32 gap-5 dark:bg-gray-800 ">
+        <div className="flex min-h-[80vh] py-10 mt-0 px-6 lg:px-32 gap-5 dark:bg-gray-800 ">
           <div className="shadow-md h-max p-12 flex flex-col gap-5 min-w-[240px] w-96 bg-white rounded-lg  dark:text-white dark:bg-slate-900 dark:border-gray-300">
             <div className="flex gap-5 justify-center items-center ">
               <div>

@@ -118,7 +118,7 @@ function Profile() {
   return ( 
     <>
       {isLoaded && (
-        <div className="flex flex-col items-center justify-start min-h-[80vh] gap-3  dark:bg-gray-800 dark:text-gray-200 ">
+        <div className="flex flex-col items-center justify-start min-h-[80vh] gap-3 pt-4 dark:bg-gray-800 dark:text-gray-200 ">
           <h2 className="text-3xl">Welcome to Skilled</h2>
           <h4 className="text-xl">
             <br></br>

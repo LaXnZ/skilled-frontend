@@ -31,7 +31,7 @@ function Details() {
     <>
       {gigData && currentImage !== "" && (
         <div className="col-span-2 flex flex-col gap-3">
-          <h2 className="text-2xl font-bold text-[#404145] mb-1 overflow-hidden overflow-ellipsis max-h-[80px]">
+          <h2 className=" py-10 text-2xl font-bold text-[#404145] mb-1 overflow-hidden overflow-ellipsis max-h-[80px] dark:text-gray-200">
             {gigData.title}
           </h2>
           <div className="flex items-center gap-2">
@@ -45,7 +45,7 @@ function Details() {
                   className="rounded-full"
                 />
               ) : (
-                <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative">
+                <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative dark:bg-blue-400">
                   <span className="text-xl text-white">
                     {gigData.createdBy.email[0].toUpperCase()}
                   </span>
@@ -53,10 +53,10 @@ function Details() {
               )}
             </div>
             <div className="flex gap-2 items-center">
-              <h4 className="text-[#27272a] font-bold">
+              <h4 className="text-[#27272a] font-bold dark:text-gray-200">
                 {gigData.createdBy.fullName}
               </h4>
-              <h6 className="text-[#74767e]">@{gigData.createdBy.username}</h6>
+              <h6 className="text-[#74767e] dark:text-gray-200">@{gigData.createdBy.username}</h6>
             </div>
             <div className="flex items-center gap-1">
               <div className="flex">
@@ -66,13 +66,13 @@ function Details() {
                     className={`cursor-pointer ${
                       Math.ceil(averageRatings) >= star
                         ? "text-yellow-400"
-                        : "text-gray-300"
+                        : "text-gray-300 dark:text-gray-200"
                     }`}
                   />
                 ))}
               </div>
               <span className="text-yellow-500">{averageRatings}</span>
-              <span className="text-[#27272a]">({gigData.reviews.length})</span>
+              <span className="text-[#27272a] dark:text-gray-200">({gigData.reviews.length})</span>
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -97,23 +97,23 @@ function Details() {
                     onClick={() => setCurrentImage(image)}
                     className={`${
                       currentImage === image ? "" : "blur-sm"
-                    } cursor-pointer transition-all duration-500`}
+                    } cursor-pointer transition-all duration-500 `}
                   />
                 ))}
             </div>
           </div>
           <div>
-            <h3 className="text-3xl my-5 font-medium text-[#404145]">
+            <h3 className="text-3xl my-5 font-medium text-[#404145] dark:text-gray-200">
               About this gig
             </h3>
             <div>
-              <p className="overflow-hidden overflow-ellipsis max-h-[80px]">{gigData.description}</p>
+              <p className="overflow-hidden overflow-ellipsis max-h-[80px] dark:text-gray-300">{gigData.description}</p>
             </div>
           </div>
           {/* About the seller */}
 
           <div className="">
-            <h3 className="text-3xl my-5 font-medium text-[#404145]">
+            <h3 className="text-3xl my-5 font-medium text-[#404145] dark:text-gray-200">
               About the Seller
             </h3>
             
@@ -126,11 +126,11 @@ function Details() {
                     alt="profile"
                     height={120}
                     width={120}
-                    className="rounded-full"
+                    className="rounded-full  "
                   />
                 ) : (
-                  <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative">
-                    <span className="text-xl text-white">
+                  <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative dark:bg-blue-400">
+                    <span className="text-xl text-white ">
                       {gigData.createdBy.email[0].toUpperCase()}
                     </span>
                   </div>
@@ -140,14 +140,14 @@ function Details() {
 
               <div className="flex flex-col gap-1 pb-6">
                 <div className="flex  gap-2 items-center">
-                  <h4 className="font-medium text-lg">
+                  <h4 className="font-medium text-lg dark:text-gray-200">
                     {gigData.createdBy.fullName}
                   </h4>
-                  <span className="text-[#74767e]">
+                  <span className="text-[#74767e] dark:text-gray-200">
                     @{gigData.createdBy.username}
                   </span>
                 </div>
-                <div className="overflow-hidden overflow-ellipsis max-h-[80px]">
+                <div className="overflow-hidden overflow-ellipsis max-h-[80px] dark:text-gray-200">
                   <p>{gigData.createdBy.description}</p>
                 </div>
                 <div className="flex items-center gap-1">
@@ -158,7 +158,7 @@ function Details() {
                         className={`cursor-pointer ${
                           Math.ceil(gigData.averageRating) >= star
                             ? "text-yellow-400"
-                            : "text-gray-300"
+                            : "text-gray-300 dark:text-gray-200"
                         }`}
                       />
                     ))}
@@ -166,14 +166,14 @@ function Details() {
                   <span className="text-yellow-500">
                     {gigData.averageRating}
                   </span>
-                  <span className="text-[#74767e]">
+                  <span className="text-[#74767e] dark:text-gray-200">
                     ({gigData.totalReviews})
                   </span>
                 </div>
               </div>
             </div>
             <button
-  className="border text-lg font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 mb-8"
+  className="border text-lg font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 mb-8 dark:bg-sky-800 hover:dark:bg-sky-600"
   type="button"
   onClick={() => router.push("../sellerPortfolio")}
 >

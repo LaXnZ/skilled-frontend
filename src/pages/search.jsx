@@ -26,20 +26,20 @@ function Search() {
   return (
     <>
       {gigs && (
-        <div className="mx-24 mb-24">
+        <div className="py-10 px-24  dark:bg-gray-800 dark:text-gray-200">
           {q && (
-            <h3 className="text-4xl mb-10">
+            <h3 className="text-4xl mb-10 ">
               Results for <strong>{q}</strong>
             </h3>
           )}
         
           <div>
-            <div className="my-4">
-              <span className="text-[#73757c] font-medium  ">
+            <div className="my-4 ">
+              <span className="text-[#73757c] font-medium  dark:text-gray-200 ">
                 {gigs.length} services available
               </span>
             </div>
-            <div className="grid grid-cols-4">
+            <div className="grid grid-cols-4 ">
               {gigs.map((gig) => (
                 <SearchGridItem gig={gig} key={gig.id} />
               ))}

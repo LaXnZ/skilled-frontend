@@ -19,11 +19,11 @@ function Reviews() {
     <>
       {gigData && (
         <div className="mb-10">
-          <h3 className="text-2xl my-5 font-normal text-[#404145] ">Reviews</h3>
-          <div className="flex gap-3 mb-5">
+          <h3 className="text-2xl my-5 font-normal text-[#404145] dark:text-gray-200">Reviews</h3>
+          <div className="flex gap-3 mb-5 dark:text-gray-200">
             <h5>{gigData.reviews.length} reviews for this Gig</h5>
             <div className="flex text-yellow-500 items-center gap-2">
-              <div className="flex gap-1">
+              <div className="flex gap-1 dark:text-gray-200">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <FaStar
                     key={star}
@@ -40,7 +40,7 @@ function Reviews() {
           </div>
           <div className="flex flex-col gap-6">
             {gigData.reviews.map((review) => (
-              <div className="flex gap-3 border-t pt-6" key={review.id}>
+              <div className="flex gap-3 border-t pt-6 dark:text-gray-200" key={review.id}>
                 <div>
                   {review.reviewer.profileImage ? (
                     <Image
@@ -48,11 +48,11 @@ function Reviews() {
                       alt="Profile"
                       width={40}
                       height={40}
-                      className="rounded-full"
+                      className="rounded-full dark:text-gray-200"
                     />
                   ) : (
-                    <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative">
-                      <span className="text-xl text-white">
+                    <div className="bg-purple-500 h-10 w-10 flex items-center justify-center rounded-full relative ">
+                      <span className="text-xl text-white dark:text-gray-200">
                         {review.reviewer.email[0].toUpperCase()}
                       </span>
                     </div>
@@ -75,7 +75,7 @@ function Reviews() {
                     </div>
                     <span>{review.rating}</span>
                   </div>
-                  <p className="text-[#404145] pr-20">{review.reviewText}</p>
+                  <p className="text-[#404145] pr-20 dark:text-gray-200">{review.reviewText}</p>
                 </div>
               </div>
             ))}

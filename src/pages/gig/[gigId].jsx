@@ -49,7 +49,7 @@ function GigPage() {
   }, [dispatch, gigId, userInfo]);
 
   return (
-    <div className="grid grid-cols-3 mx-32 gap-20 ">
+    <div className="grid grid-cols-3 px-32 gap-20 dark:bg-gray-800">
       <Details />
       <Pricing />
     </div>

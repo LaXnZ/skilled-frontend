@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
        <Navbar />
         <div
           className={`${
-            router.pathname !== "/" ? "mt-36" : ""
+            router.pathname !== "/" ? "mt-28" : ""
           } mb-auto w-full mx-auto`}
         >
           <Component {...pageProps} />
