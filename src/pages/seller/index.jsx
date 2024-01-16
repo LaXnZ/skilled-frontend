@@ -26,15 +26,20 @@ function Index() {
   }, [userInfo]);
 
   const DashboardCard = ({ title, value, onClick }) => (
-    <div
+  <div
       className="shadow-lg mb-4 p-10 flex flex-col items-center justify-center cursor-pointer hover:shadow-xl rounded-lg transition-all duration-300  dark:bg-gray-900 dark:text-gray-200"
       onClick={onClick}
     >
       <h2 className="text-2xl pb-4">{title}</h2>
       <h3 className="text-sky-500 text-6xl font-extrabold">
-        {value !== null && value !== undefined ? value : 0}
+        {value == undefined
+          ? ""
+          : value !== null && value !== undefined
+          ? value
+          : 0}
       </h3>
     </div>
+    
   );
 
   return (
@@ -68,7 +73,9 @@ function Index() {
               </div>
             </div>
             <div className="border-t border-gray-300 pt-6">
-              <p className="text-gray-700 dark:text-white">{userInfo.description}</p>
+              <p className="text-gray-700 dark:text-white">
+                {userInfo.description}
+              </p>
             </div>
           </div>
 
@@ -89,15 +96,6 @@ function Index() {
               onClick={() => router.push("/seller/unread-messages")}
             />
             <DashboardCard
-              title="Earnings Today"
-              value={`LKR ${
-                dashboardData?.dailyRevenue !== null &&
-                dashboardData?.dailyRevenue !== undefined
-                  ? dashboardData?.dailyRevenue
-                  : 0
-              }`}
-            />
-            <DashboardCard
               title="Earnings Monthly"
               value={`LKR ${
                 dashboardData?.monthlyRevenue !== null &&
@@ -109,11 +107,22 @@ function Index() {
             <DashboardCard
               title="Earnings Yearly"
               value={`LKR ${
-                dashboardData?.revenue !== null &&
-                dashboardData?.revenue !== undefined
-                  ? dashboardData?.revenue
+                dashboardData?.yearlyRevenue !== null &&
+                dashboardData?.yearlyRevenue !== undefined
+                  ? dashboardData?.yearlyRevenue
                   : 0
               }`}
+            />
+            <DashboardCard
+              title="Withdraw Your Earnings" 
+              onClick={() => router.push("/earnings")}
+              // value={`LKR ${
+              //   dashboardData?.yearlyrevenue !== null &&
+              //   dashboardData?.yearlyRevenue !== undefined
+              //     ? dashboardData?.yearlyrevenue
+              //     : 0
+              // }`}
+              value={undefined} 
             />
           </div>
         </div>

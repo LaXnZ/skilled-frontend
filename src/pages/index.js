@@ -7,13 +7,14 @@ import Services from "../components/landing/Services";
 import { useStateProvider } from "../context/StateContext";
 import React from "react";
 
+
 function Index() {
   const [{ showLoginModal, showSignupModal }] = useStateProvider();
 
   return (
     <div>
       <HeroBanner />
-
+     
       <Everything />
       <Services />
 

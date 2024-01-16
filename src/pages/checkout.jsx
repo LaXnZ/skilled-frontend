@@ -11,6 +11,7 @@ const stripePromise = loadStripe("pk_test_51OCm6sSIRaIcC2URV56M7TiIVOQ51XHNJK7KA
 
 
 function Checkout() {
+  debugger
   const [clientSecret, setClientSecret] = useState("");
   const router = useRouter();
   const { gigId } = router.query;

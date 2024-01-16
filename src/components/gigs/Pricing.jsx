@@ -50,9 +50,10 @@ function Pricing() {
                 <BiRightArrowAlt className="text-2xl absolute right-4" />
               </button>
             ) : (
+              
               <button
-                className="flex items-center bg-[#1DBF73] text-white py-2 justify-center font-bold text-lg relative rounded dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
-                onClick={() => router.push(`/checkout?gigId=${gigData.id}`)}
+                className="flex items-center bg-[rgb(29,191,115)] text-white py-2 justify-center font-bold text-lg relative rounded dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
+                onClick={() => router.push(`/paymentOptions?gigId=${gigData.id}`)}
               >
                 <span>Continue</span>
                 <BiRightArrowAlt className="text-2xl absolute right-4" />

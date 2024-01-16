@@ -7,6 +7,9 @@ import { useEffect } from "react";
 import { StateProvider } from "../context/StateContext";
 import reducer, { initialState } from "../context/StateReducers";
 import Navbar from "@/components/Navbar";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import PayPalPayment from "@/pages/PayPalPayment";
+
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -22,7 +25,14 @@ export default function App({ Component, pageProps }) {
     }
   }, [cookies, router]);
 
+  const initialOptions = {
+    clientId: "AR9LsIcMOTFanCizP_fhdTWrLXPfbt1i3lgqBq_5k84lPb61WUp9JXUvL7qO4LMmEu6IuwI0jN9Givw1",
+    currency: "USD",
+    intent: "capture",
+};
+
   return (
+    <PayPalScriptProvider options={initialOptions}>
     <StateProvider initialState={initialState} reducer={reducer}>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -37,8 +47,12 @@ export default function App({ Component, pageProps }) {
         >
           <Component {...pageProps} />
         </div>
+        {/* <PayPalButtons/> */}
+
+        {/* <PayPalPayment/> */}
         <Footer />
       </div>
     </StateProvider>
+    </PayPalScriptProvider>
   );
 }
