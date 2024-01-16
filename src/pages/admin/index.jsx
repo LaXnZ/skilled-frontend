@@ -77,7 +77,7 @@ const AdminDashboard = () => {
   return (
     <div className="flex ">
    
-      <div className="w-1/5 h-screen bg-gray-700 p-6 text-black dark:text-gray-200  mt-0 -mt-1 ">
+      <div className="w-1/5 h-screen bg-gray-700 p-6 text-black dark:text-gray-200  mt-0  ">
       <h2 className="text-4xl font-bold mb-8">Quick Actions</h2>
       <ul>
         <li className="mb-4">
@@ -176,7 +176,9 @@ const AdminDashboard = () => {
   <p className="text-sm text-gray-600 dark:text-gray-200 ">All Categories</p>
   <button
   className="border text-md font-semibold px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-md mt-4 dark:bg-sky-800 hover:dark:bg-sky-600"
-  type="button">
+  type="button"
+  onClick={() => router.push("/admin/analytics")}
+  >
   View Details
   </button>
 </div>

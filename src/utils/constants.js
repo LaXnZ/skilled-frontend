@@ -2,8 +2,6 @@ export const HOST = process.env.SERVER_URL;
 export const API_URL = `${HOST}/api`;
 export const IMAGES_URL = `${HOST}/uploads`;
 
-
-
 export const AUTH_ROUTES = `${API_URL}/auth`;
 export const GIG_ROUTES = `${API_URL}/gigs`;
 export const ORDERS_ROUTES = `${API_URL}/orders`;
@@ -40,5 +38,6 @@ export const MARK_AS_READ_ROUTE = `${MESSAGES_ROUTES}/mark-as-read`;
 
 export const GET_SELLER_DASHBOARD_DATA = `${DASHBOARD_DATA_ROUTES}/seller`;
 
+export const GET_ADMIN_ANALYTICS = `${DASHBOARD_DATA_ROUTES}/admin/analytics`;
 
 export const GET_ALL_GIGS = `${GIG_ROUTES}/get-all-gigs`;
