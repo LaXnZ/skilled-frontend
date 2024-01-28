@@ -12,8 +12,6 @@ import { reducerCases } from "@/context/constants";
 import ContextMenu from "./search/ContextMenu";
 
 function Navbar() {
-
-
   const handleLogin = () => {
     if (showSignupModal) {
       dispatch({
@@ -103,7 +101,7 @@ function Navbar() {
           });
           setIsLoaded(true);
           console.log({ user });
-          
+
           if (user.isProfileSet === false) {
             router.push("/profile");
           } else {
@@ -157,15 +155,18 @@ function Navbar() {
     },
   ];
 
-  //give me the code, if the userRole is ADMIN then user should be redirected to admin dashboard
   if (userInfo && userInfo.userRole === "ADMIN") {
-     router.push("/admin");
-   }
+    const dashboardOption = {
+      name: "Dashboard",
+      callback: (e) => {
+        e.stopPropagation();
 
-
-
-
-
+        setIsContextMenuVisible(false);
+        router.push("/admin");
+      },
+    };
+    ContextMenuData.splice(ContextMenuData.length - 1, 0, dashboardOption);
+  }
 
   return (
     <>
@@ -257,7 +258,7 @@ function Navbar() {
                 className="cursor-pointer text-[#ffffff] bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md font-medium dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                 onClick={handleOrdersNavigate}
               >
-                Orders 
+                Orders
               </li>
 
               {isSeller ? (

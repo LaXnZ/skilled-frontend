@@ -29,8 +29,8 @@ const Analytics = (props) => {
   
 
   return (
-    <div className="analytics-container p-6 dark:bg-gray-800 dark:text-gray-200">
-      <h1 className="text-5xl text-center font-bold mb-4 ">Analytics</h1>
+    <div className="analytics-container pt-16 p-6 pb-12 dark:bg-gray-800 dark:text-gray-200">
+      <h1 className="text-5xl text-center font-bold mb-16 ">Analytics</h1>
 
       <div className="grid grid-cols-2 grid-rows-2 gap-10  ">
         {/* Top Row */}

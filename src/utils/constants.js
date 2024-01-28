@@ -7,6 +7,7 @@ export const GIG_ROUTES = `${API_URL}/gigs`;
 export const ORDERS_ROUTES = `${API_URL}/orders`;
 export const MESSAGES_ROUTES = `${API_URL}/messages`;
 export const DASHBOARD_DATA_ROUTES = `${API_URL}/dashboard`;
+export const PORTFOLIO_ROUTES = `${API_URL}/portfolio`;
 
 export const LOGIN_ROUTE = `${AUTH_ROUTES}/login`;
 export const SIGNUP_ROUTE = `${AUTH_ROUTES}/signup`;
@@ -30,6 +31,12 @@ export const CREATE_ORDER = `${ORDERS_ROUTES}/create`;
 export const ORDER_SUCCESS_ROUTE = `${ORDERS_ROUTES}/success`;
 export const GET_BUYER_ORDERS_ROUTE = `${ORDERS_ROUTES}/get-buyer-orders`;
 export const GET_SELLER_ORDERS_ROUTE = `${ORDERS_ROUTES}/get-seller-orders`;
+
+export const ADD_PORTFOLIO = `${PORTFOLIO_ROUTES}`;
+export const GET_PORTFOLIO = `${PORTFOLIO_ROUTES}/portfolio/user`;
+
+export const ADD_FEEDBACK = `${API_URL}/feedback/submit`; 
+export const GET_ALL_FEEDBACKS = `${API_URL}/feedback/get-all-feedbacks`;  
 
 export const GET_MESSAGES = `${MESSAGES_ROUTES}/get-messages`;
 export const ADD_MESSAGE = `${MESSAGES_ROUTES}/add-message`;
