@@ -240,7 +240,7 @@ function Navbar() {
             <ul className="flex gap-10 items-center">
               {isSeller && (
                 <li
-                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md  dark:bg-blue-500 dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
+                  className="cursor-pointer text-[#ffffff] font-medium bg-sky-500 hover:bg-sky-400 px-4 py-2 rounded-md  dark:text-gray-200 dark:bg-sky-800 hover:dark:bg-sky-600"
                   onClick={() => router.push("/seller/gigs/create")}
                 >
                   Create Gig
